@@ -46,6 +46,7 @@ const App = ({ signOut }) => {
     //   key: data.name,
     //   data: image
     // });
+    
         await client.graphql({
       query: createNoteMutation,
       variables: { input: data },
@@ -89,12 +90,12 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
-          {/* <View
+          <View
             name="image"
             as="input"
             type="file"
             style={{ alignSelf: "end" }}
-          /> */}
+          />
           <Button type="submit" variation="primary">
             Create Note
           </Button>
